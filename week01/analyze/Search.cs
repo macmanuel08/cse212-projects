@@ -54,7 +54,7 @@ public static class Search {
     private static int SearchSorted2(int[] data, int target, int start, int end) {
         if (end < start)
             return 1; // All done
-        var middle = (end + start) / 2;
+        var middle = (end + start) / 2; // 8 + 3 / 2 = 6
         if (data[middle] == target)
             return 1; // Found it
         if (data[middle] < target) // Search in the upper half after index middle

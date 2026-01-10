@@ -43,6 +43,8 @@ public static class Algorithms {
         return count;
     }
 
+    // O(n)
+
     /// <summary>
     /// The count variable is keeping track of the amount
     /// of work done in the function.  When the function is 
@@ -57,6 +59,8 @@ public static class Algorithms {
 
         return count;
     }
+
+    // O(n^2)
 
     /// <summary>
     /// The count variable is keeping track of the amount
