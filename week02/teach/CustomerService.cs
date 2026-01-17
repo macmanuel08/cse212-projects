@@ -15,6 +15,8 @@ public class CustomerService {
         // Expected Result: 
         Console.WriteLine("Test 1");
 
+        var customers = new CustomerService(1);
+        Console.WriteLine(customers);
         // Defect(s) Found: 
 
         Console.WriteLine("=================");
@@ -23,7 +25,9 @@ public class CustomerService {
         // Scenario: 
         // Expected Result: 
         Console.WriteLine("Test 2");
-
+        customers.AddNewCustomer();
+         customers.AddNewCustomer();
+        Console.WriteLine(customers);
         // Defect(s) Found: 
 
         Console.WriteLine("=================");
@@ -67,7 +71,7 @@ public class CustomerService {
     /// </summary>
     private void AddNewCustomer() {
         // Verify there is room in the service queue
-        if (_queue.Count > _maxSize) {
+        if (_queue.Count >= _maxSize) {
             Console.WriteLine("Maximum Number of Customers in Queue.");
             return;
         }
